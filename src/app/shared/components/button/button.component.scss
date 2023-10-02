@@ -1,0 +1,8 @@
+@import 'app.theme';
+
+button {
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: $formElementBorderRadius;
+    border: 1px solid $gray;
+}

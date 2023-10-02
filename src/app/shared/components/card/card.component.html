@@ -1,0 +1,6 @@
+<div class="card"         [attr.style]="'background: linear-gradient(180deg, '+borderColor+' 10%, #fff 100%);'">
+    <div class="card-name">{{_pokemon.name}}</div>
+    <div class="card-body">
+        <img #img (error)="onError(img)" [src]="_pokemon.image" [alt]="_pokemon.name" crossorigin="anonymous"  #imageElement (load)="extractColors(imageElement)" />
+    </div>
+</div>

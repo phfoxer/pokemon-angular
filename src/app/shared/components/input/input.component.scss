@@ -1,0 +1,7 @@
+@import 'app.theme';
+
+input {
+    padding: 5px 8px;
+    border: 1px solid $gray;
+    border-radius: $formElementBorderRadius;
+}

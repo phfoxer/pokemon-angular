@@ -1,0 +1,4 @@
+<h1>Pokemon types</h1>
+<div class="list">
+    <app-pokeball *ngFor="let item of listType" [type]="item" (onSelected)="getPokemons($event)" ></app-pokeball>
+</div>

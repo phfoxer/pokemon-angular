@@ -1,0 +1,31 @@
+<div class="flex">
+    <app-button (click)="back()">Back</app-button>
+    <h1>{{pokemonType.name}} Pokemons</h1>
+</div>
+
+<form
+    [formGroup]="form"
+    class="flex"
+>
+    <app-button (click)="prev()">Prev</app-button>
+    <app-input
+        [formGroup]="form"
+        placeholder="Page"
+        name="page"
+        type="number"
+        [width]="'40px'"
+    ></app-input>
+    <app-button (click)="next()">Next</app-button>
+</form>
+
+<div
+    class="list"
+    *ngIf="pokemonByTypePaginate.length > 0"
+>
+    <app-card
+        *ngFor="let item of pokemonByTypePaginate"
+        [pokemon]="item"
+    ></app-card>
+</div>
+
+<div *ngIf="pokemonByTypePaginate.length === 0">{{pokemonType.name}} not found</div>

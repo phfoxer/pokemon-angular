@@ -1,0 +1,51 @@
+@import 'app.theme';
+
+.container {
+
+    &-header {
+        height: 51px;
+        width: 100%;
+        background-color: $white;
+        text-align: center;
+        border-bottom: 5px solid #00000044;
+        padding-bottom: 5px;
+        position: relative;
+
+        &_pokeball {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(180deg, rgba(247, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 1) 57%, rgba(255, 255, 255, 1) 57%);
+            border-radius: 30px;
+            margin-left: calc(50% - 10px);
+            left: 0;
+            top: 0;
+            margin-top: 43px;
+
+            &::after {
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                content: "";
+                position: absolute;
+                border: 2px solid #000;
+                border-radius: 10px;
+                left: 0;
+                top: 0;
+                margin-top: calc(50% - 7px);
+                margin-left: calc(50% - 7px);
+            }
+
+            border: 1px solid #000;
+        }
+    }
+
+    &-body {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 30px;
+        margin: 0px auto;
+        margin-top: 30px;
+        max-width: 800px;
+    }
+}
